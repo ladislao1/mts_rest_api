@@ -28,10 +28,8 @@ curl_setopt_array($curl, array(
       ],
       "from": {
       "sms_address": "'.$sender.'"
+      }
     }
-
-    }
-    
   ]
 }',
   CURLOPT_HTTPHEADER => array(
@@ -44,3 +42,5 @@ $response = curl_exec($curl);
 
 curl_close($curl);
 echo $response;
+
+?>
